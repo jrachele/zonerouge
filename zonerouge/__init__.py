@@ -2,7 +2,7 @@ import functools
 import os
 
 from flask import (
-    Blueprint, Flask, flash, g, redirect, render_template, request, session, url_for
+    Flask, flash, g, redirect, render_template, request, session, url_for
 )
 
 
@@ -27,13 +27,16 @@ def create_app(test_config=None):
     except OSError:
         pass
 
-    @app.route('/', methods=('GET', 'POST'))
+    @app.route('/')
     def index():
         return render_template('index.html')
-        # a simple page that says hello
 
-    @app.route('/hello')
-    def hello():
-        return 'Hello, World!'
+    @app.route('/information')
+    def information():
+        location = request.args.get('location')
+        if location:
+            return render_template("information/" + location + '.html')
+        else:
+            return render_template('information/Generic-Information.html')
 
     return app

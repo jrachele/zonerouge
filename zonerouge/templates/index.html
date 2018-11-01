@@ -2,7 +2,6 @@
 <html lang="en">
 
 <head>
-
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -16,8 +15,8 @@
     <script src="static/js/uikit-icons.min.js"></script>
 
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="static/css/map.css">
     <script src="https://unpkg.com/leaflet@1.3.4/dist/leaflet.js"></script>
-    <script src="static/js/leaflet.ajax.min.js"></script>
     <script src="static/js/leaflet.imageoverlay.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous"></script>
@@ -31,9 +30,8 @@
         <div class="uk-section-primary uk-preserve-color">
             <nav class="uk-navbar-container uk-navbar-primary uk-navbar-transparent uk-light" uk-navbar>
                 <div class="uk-navbar-left">
-
+                    <a class="uk-navbar-item uk-logo" href="#">Zone Rouge</a>
                     <ul class="uk-navbar-nav">
-                        <li class="uk-active uk-logo"><a href="/">Zone Rouge</a></li>
                         <li><a href="#">Références</a></li>
                         <li><a href="#">À propos</a></li>
                     </ul>
@@ -43,57 +41,16 @@
         </div>
 
         <div class="uk-flex uk-flex-wrap uk-flex-wrap-around uk-margin-left uk-margin-right uk-margin-top"
-            uk-height-viewport="offset-top: true; offset-bottom: true">
+            uk-height-viewport="offset-top: true; offset-bottom: true" uk-height-match>
             <div class="uk-width-expand uk-margin-right uk-margin-bottom" id="map"></div>
-            <div class="uk-width-1-3">
-                <ul class="uk-nav-parent-icon uk-nav-primary" uk-nav>
-                    <li class="uk-active">
-                        <a href="#">Informations</a>
-                    </li>
-                    <li class="uk-parent">
-                        <a href="#">Parent</a>
-                        <ul class="uk-nav-sub">
-                            <li><a href="#">Sub item</a></li>
-                            <li>
-                                <a href="#">Sub item</a>
-                                <ul>
-                                    <li><a href="#">Sub item</a></li>
-                                    <li><a href="#">Sub item</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="uk-parent">
-                        <a href="#">Parent</a>
-                        <ul class="uk-nav-sub">
-                            <li><a href="#">Sub item</a></li>
-                            <li><a href="#">Sub item</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
         </div>
-
-        <div class="uk-section uk-section-secondary">
-            <div class="uk-container">
-
-                <h3>Contact</h3>
-
-                <div class="uk-grid-match uk-child-width-1-3@m" uk-grid>
-                    <div>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
-                    </div>
-                    <div>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
-                    </div>
-                    <div>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
-                    </div>
+        <div id="information-bar" uk-offcanvas="flip: true; bg-close: false;">
+            <div class="uk-offcanvas-bar">
+                <button class="uk-offcanvas-close" type="button" uk-close></button>
+                <div id="information">
                 </div>
-
             </div>
         </div>
-
     </div>
 </body>
 
