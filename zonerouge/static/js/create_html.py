@@ -1,7 +1,12 @@
-
+with open("zonerouge/static/js/map.js") as f:
+    for line in f.readlines():
+        if "title: " in line:
+            title = line.split(": ")[1].strip()[1:-1]
+            print(title)
+            content = """
     <ul class="uk-nav-parent-icon uk-nav-primary" uk-nav="multiple: true">
     <li class="uk-active">
-        <a href="#">Beaumont-en-Verdunois</a>
+        <a href="#">{}</a>
     </li>
     <hr>
     <li class="uk-parent">
@@ -50,4 +55,6 @@
         </ul>
     </li>
 </ul>
-                    
+                    """.format(title)
+            with open("zonerouge/templates/information/" + title + ".html", "w") as n:
+                n.writelines(content)

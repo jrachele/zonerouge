@@ -222,6 +222,94 @@ $(window).on("load", function() {
       showInfo(e.target.options.title);
     });
 
+  L.marker([49.4101, 3.4538], {
+    title: "Allemant"
+  })
+    .addTo(map)
+    .on("click", function(e) {
+      showInfo(e.target.options.title);
+    });
+
+  L.marker([48.8584, 5.9285], {
+    title: "Regniéville"
+  })
+    .addTo(map)
+    .on("click", function(e) {
+      showInfo(e.target.options.title);
+    });
+
+  L.marker([48.8512, 5.9065], {
+    title: "Remenauville"
+  })
+    .addTo(map)
+    .on("click", function(e) {
+      showInfo(e.target.options.title);
+    });
+
+  L.marker([48.853, 5.9615], {
+    title: "Fey-en-Haye"
+  })
+    .addTo(map)
+    .on("click", function(e) {
+      showInfo(e.target.options.title);
+    });
+
+  L.marker([48.824, 5.8461], {
+    title: "Flirey"
+  })
+    .addTo(map)
+    .on("click", function(e) {
+      showInfo(e.target.options.title);
+    });
+
+  L.marker([49.1611, 5.4726], {
+    title: "Vaux-devant-Damloup"
+  })
+    .addTo(map)
+    .on("click", function(e) {
+      showInfo(e.target.options.title);
+    });
+
+  L.marker([49.1521, 5.0716], {
+    title: "Vauquois"
+  })
+    .addTo(map)
+    .on("click", function(e) {
+      showInfo(e.target.options.title);
+    });
+
+  L.marker([50.6904, 2.7315], {
+    title: "Bailleul"
+  })
+    .addTo(map)
+    .on("click", function(e) {
+      showInfo(e.target.options.title);
+    });
+
+  L.marker([50.4846, 2.8056], {
+    title: "La Bassée"
+  })
+    .addTo(map)
+    .on("click", function(e) {
+      showInfo(e.target.options.title);
+    });
+
+  L.marker([49.9998, 3.6021], {
+    title: "Mazinghien"
+  })
+    .addTo(map)
+    .on("click", function(e) {
+      showInfo(e.target.options.title);
+    });
+
+  L.marker([49.8353, 2.8084], {
+    title: "Fey"
+  })
+    .addTo(map)
+    .on("click", function(e) {
+      showInfo(e.target.options.title);
+    });
+
   var topleft = L.latLng(51.211842, 2.3217557),
     topright = L.latLng(50.3952956, 7.8338167),
     bottomleft = L.latLng(48.9558751, 1.4976877);
