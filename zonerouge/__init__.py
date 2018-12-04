@@ -29,7 +29,15 @@ def create_app(test_config=None):
 
     @app.route('/')
     def index():
-        return render_template('index.html')
+        references = ""
+        with open('zonerouge/references.txt') as f:
+
+            for line in f.readlines():
+                caption = line.split("//")[-1].split("/")[0]
+                l = "<a href='{link}'>{caption}</a></br>".format(
+                    link=line, caption=caption)
+                references += l
+        return render_template('index.html', references=references)
 
     @app.route('/information')
     def information():

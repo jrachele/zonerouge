@@ -1,7 +1,7 @@
 $(window).on("load", function() {
   var map = L.map("map", {
     center: [49.162, 5.3876],
-    zoom: 7
+    zoom: 5
   });
 
   function showInfo(location) {
@@ -288,22 +288,6 @@ $(window).on("load", function() {
 
   L.marker([50.4846, 2.8056], {
     title: "La Bassée"
-  })
-    .addTo(map)
-    .on("click", function(e) {
-      showInfo(e.target.options.title);
-    });
-
-  L.marker([49.9998, 3.6021], {
-    title: "Mazinghien"
-  })
-    .addTo(map)
-    .on("click", function(e) {
-      showInfo(e.target.options.title);
-    });
-
-  L.marker([49.8353, 2.8084], {
-    title: "Fey"
   })
     .addTo(map)
     .on("click", function(e) {
