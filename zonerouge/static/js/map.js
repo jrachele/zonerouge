@@ -1,6 +1,10 @@
 $(window).on("load", function() {
+  var modal = UIkit.modal("#welcome");
+  modal.show();
+
+  latlng = [49.162, 5.3876];
   var map = L.map("map", {
-    center: [49.162, 5.3876],
+    center: latlng,
     zoom: 5
   });
 
@@ -24,6 +28,23 @@ $(window).on("load", function() {
   map.on("click", function(e) {
     showInfo();
   });
+
+  // var popups = [
+  //   L.popup()
+  //     .setLatLng(latlng)
+  //     .setContent(
+  //       "<h3>La Bataille de Verdun</h3><br/><p>300.000 morts, 10 villages</p>"
+  //     ),
+  //   L.popup()
+  //     .setLatLng([49.0135, 3.3833])
+  //     .setContent(
+  //       "<h3>La Bataille de la Marne (1914)</h3><br/><p>500.000 morts, 8 villages</p>"
+  //     )
+  // ];
+
+  // popups.forEach(popup => {
+  //   popup.addTo(map);
+  // });
 
   L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
     attribution:
